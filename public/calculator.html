@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор услуг - MineDev</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">MineDev</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="index.html#services">Услуги</a></li>
+                <li><a href="calculator.html" class="active">Калькулятор</a></li>
+                <li><a href="index.html#reviews">Отзывы</a></li>
+                <li><a href="index.html#contact">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="calculator-page">
+            <h1>Калькулятор стоимости услуг</h1>
+            <p class="calculator-description">Рассчитайте стоимость вашего проекта прямо сейчас</p>
+            
+            <div class="calculator-form">
+                <div class="calculator-options">
+                    <div class="option-group">
+                        <label>Выберите услугу:</label>
+                        <select id="serviceType" class="form-select">
+                            <option value="server">Администрирование сервера</option>
+                            <option value="website">Разработка сайта</option>
+                            <option value="forum">Разработка форума</option>
+                        </select>
+                    </div>
+                    
+                    <div class="option-group">
+                        <label>Сложность проекта:</label>
+                        <select id="complexity" class="form-select">
+                            <option value="simple">Простой</option>
+                            <option value="medium">Средний</option>
+                            <option value="complex">Сложный</option>
+                        </select>
+                    </div>
+
+                    <div class="option-group">
+                        <label>Сроки (месяцы):</label>
+                        <input type="number" id="timeline" min="1" max="12" value="1" class="form-input">
+                    </div>
+                </div>
+
+                <div class="price-display">
+                    <h3>Примерная стоимость:</h3>
+                    <p id="totalPrice" class="price">0 ₽</p>
+                </div>
+
+                <div class="calculator-info">
+                    <h3>Что входит в стоимость?</h3>
+                    <ul class="price-features">
+                        <li>✓ Разработка и настройка</li>
+                        <li>✓ Тестирование и отладка</li>
+                        <li>✓ Техническая поддержка</li>
+                        <li>✓ Обучение персонала</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 MineDev. Все права защищены.</p>
+    </footer>
+
+    <script src="calculator.js"></script>
+</body>
+</html> 

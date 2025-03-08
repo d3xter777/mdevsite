@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MineDev Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="language-switcher">
+        <button class="language-btn active" data-lang="ru">RU</button>
+        <button class="language-btn" data-lang="en">EN</button>
+    </div>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <a href="index.html" class="logo">MineDev</a>
+                <div class="tnt-block">
+                    <img src="images/creeper.png" alt="Creeper">
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active" data-translate="nav.home">Главная</a></li>
+                <li><a href="services.html" data-translate="nav.services">Услуги</a></li>
+                <li><a href="#contact" data-translate="nav.contact">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="minecraft-font" data-translate="home.title">Создаем крутые проекты</h1>
+                <p class="hero-description" data-translate="home.description">Разработка сайтов, серверов и игровых проектов для Minecraft</p>
+                <div class="hero-buttons">
+                    <a href="services.html" class="cta-button" data-translate="home.cta.primary">Узнать стоимость</a>
+                    <a href="#contact" class="cta-button secondary" data-translate="home.cta.secondary">Связаться с нами</a>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">100+</span>
+                    <span class="stat-label">Успешных проектов</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Довольных клиентов</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Поддержка</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <h2 class="section-title minecraft-font" data-translate="services.title">Наши услуги</h2>
+            <div class="services-grid">
+                <div class="service-card minecraft-style">
+                    <div class="service-icon">🖥️</div>
+                    <h3>Работа с серверами</h3>
+                    <p>Профессиональная разработка, настройка и администрирование игровых серверов Minecraft</p>
+                    <ul class="service-features">
+                        <li>✓ Разработка серверов</li>
+                        <li>✓ Установка плагинов</li>
+                        <li>✓ Администрирование</li>
+                        <li>✓ Оптимизация</li>
+                    </ul>
+                    <a href="services.html#servers" class="service-link">Подробнее →</a>
+                </div>
+                <div class="service-card minecraft-style">
+                    <div class="service-icon">🌐</div>
+                    <h3>Веб-разработка</h3>
+                    <p>Создание и установка сайтов, форумов и других веб-проектов</p>
+                    <ul class="service-features">
+                        <li>✓ Создание сайтов</li>
+                        <li>✓ Установка CMS</li>
+                        <li>✓ Разработка форумов</li>
+                        <li>✓ Интеграция</li>
+                    </ul>
+                    <a href="services.html#web" class="service-link">Подробнее →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="request-section">
+            <div class="container">
+                <h2 class="section-title minecraft-font">Оставьте заявку</h2>
+                <p class="section-description">Заполните форму, и мы свяжемся с вами в ближайшее время</p>
+                
+                <form class="request-form minecraft-style" id="requestForm">
+                    <div class="form-group">
+                        <label for="name">Ваше имя</label>
+                        <input type="text" id="name" name="name" required placeholder="Введите ваше имя">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="Введите ваш email">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="messenger">Мессенджер</label>
+                        <select id="messenger" name="messenger" required>
+                            <option value="">Выберите мессенджер</option>
+                            <option value="discord">Discord</option>
+                            <option value="telegram">Telegram</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="messengerUsername">Ваш username</label>
+                        <input type="text" id="messengerUsername" name="messengerUsername" required placeholder="Введите ваш username">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service">Выберите услугу</label>
+                        <select id="service" name="service" required>
+                            <option value="">Выберите услугу</option>
+                            <option value="hosting">Хостинг сервера</option>
+                            <option value="setup">Настройка сервера</option>
+                            <option value="plugins">Установка плагинов</option>
+                            <option value="other">Другое</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Сообщение</label>
+                        <textarea id="message" name="message" required placeholder="Опишите ваш проект или задачу"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Отправить заявку</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2 class="section-title minecraft-font" data-translate="contact.title">Свяжитесь с нами</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon">💬</span>
+                        <div class="contact-details">
+                            <h4 data-translate="contact.info.discord">Discord</h4>
+                            <span>MineDev#1234</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">✈️</span>
+                        <div class="contact-details">
+                            <h4 data-translate="contact.info.telegram">Telegram</h4>
+                            <span>@minedev</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">⏰</span>
+                        <div class="contact-details">
+                            <h4 data-translate="contact.info.response">Время ответа</h4>
+                            <span data-translate="contact.info.response.time">В течение 24 часов</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p data-translate="footer.copyright">&copy; 2024 MineDev. Все права защищены.</p>
+    </footer>
+
+    <button id="scrollToTop" class="scroll-to-top" title="Наверх" data-translate="scroll.top">
+        ↑
+    </button>
+
+    <script src="translations.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Инициализация языка
+            let currentLang = localStorage.getItem('language') || 'ru';
+            updateLanguage(currentLang);
+
+            // Обработчики переключения языка
+            const langButtons = document.querySelectorAll('.language-btn');
+            langButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const lang = this.dataset.lang;
+                    updateLanguage(lang);
+                    localStorage.setItem('language', lang);
+                });
+            });
+
+            // Функция обновления языка
+            function updateLanguage(lang) {
+                // Обновление активной кнопки
+                langButtons.forEach(btn => {
+                    btn.classList.toggle('active', btn.dataset.lang === lang);
+                });
+
+                // Обновление текстов
+                document.querySelectorAll('[data-translate]').forEach(element => {
+                    const key = element.dataset.translate;
+                    if (translations[lang][key]) {
+                        if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                            element.placeholder = translations[lang][key];
+                        } else {
+                            element.textContent = translations[lang][key];
+                        }
+                    }
+                });
+            }
+
+            // Обработка формы обратной связи
+            const contactForm = document.getElementById('contactForm');
+            contactForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+
+                const formData = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    type: document.getElementById('type').value,
+                    message: document.getElementById('message').value,
+                    date: new Date().toISOString()
+                };
+
+                try {
+                    const response = await fetch('http://localhost:3000/api/requests', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(formData)
+                    });
+
+                    if (response.ok) {
+                        alert('Заявка успешно отправлена!');
+                        contactForm.reset();
+                    } else {
+                        throw new Error('Ошибка отправки заявки');
+                    }
+                } catch (error) {
+                    console.error('Ошибка:', error);
+                    alert('Произошла ошибка при отправке заявки. Пожалуйста, попробуйте позже.');
+                }
+            });
+
+            // Кнопка "Наверх"
+            const scrollToTopBtn = document.getElementById('scrollToTop');
+            
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    scrollToTopBtn.classList.add('visible');
+                } else {
+                    scrollToTopBtn.classList.remove('visible');
+                }
+            });
+
+            scrollToTopBtn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            const requestForm = document.getElementById('requestForm');
+            
+            requestForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                const formData = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    messenger: document.getElementById('messenger').value,
+                    messengerUsername: document.getElementById('messengerUsername').value,
+                    service: document.getElementById('service').value,
+                    message: document.getElementById('message').value,
+                    status: 'new',
+                    date: new Date().toISOString()
+                };
+                
+                try {
+                    const response = await fetch('/api/requests', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(formData)
+                    });
+                    
+                    if (response.ok) {
+                        showSuccessModal();
+                        requestForm.reset();
+                    } else {
+                        throw new Error('Ошибка при отправке формы');
+                    }
+                } catch (error) {
+                    console.error('Ошибка:', error);
+                    alert('Произошла ошибка при отправке формы. Пожалуйста, попробуйте позже.');
+                }
+            });
+        });
+
+        function showSuccessModal() {
+            const modal = document.createElement('div');
+            modal.className = 'success-modal';
+            modal.innerHTML = `
+                <h3>Спасибо за заявку!</h3>
+                <p>Мы свяжемся с вами в ближайшее время.</p>
+                <button onclick="this.parentElement.remove()">Закрыть</button>
+            `;
+            
+            document.body.appendChild(modal);
+            
+            // Автоматически закрываем модальное окно через 5 секунд
+            setTimeout(() => {
+                modal.remove();
+            }, 5000);
+        }
+    </script>
+</body>
+</html> 
